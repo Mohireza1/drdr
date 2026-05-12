@@ -26,7 +26,9 @@ export const DoctorCard = ({ name, spec, time, score, image }: Doctor) => {
       <p className="text-center text-sm text-gray-500">{spec}</p>
       <div className="mt-5 grid grid-rows-2 grid-cols-2 gap-2 items-center justify-center">
         <p className="text-xs text-gray-500">مدت پاسخگویی</p>
-        <p className="text-end text-sm text-gray-800 text-md">{time} دقیقه</p>
+        <p className="text-end text-sm text-gray-800 text-md">
+          {new Intl.NumberFormat("fa-IR").format(time)} دقیقه
+        </p>
         <p className="text-xs text-gray-500">پاسخگویی</p>
         <p className="text-end text-sm text-gray-800 text-md">پاسخگو</p>
       </div>
@@ -34,10 +36,9 @@ export const DoctorCard = ({ name, spec, time, score, image }: Doctor) => {
         نوبت بگیرید
       </button>
       <div className="flex flex-row-reverse items-center gap-2 absolute top-4 left-4">
-        <p
-          dir="rtl"
-          className="text-md font-semibold text-gray-700"
-        >{`${score}`}</p>
+        <p dir="rtl" className="text-md font-semibold text-gray-700">
+          {new Intl.NumberFormat("fa-IR").format(score)}
+        </p>
         <FaStar color="orange" size={18} />
       </div>
     </div>

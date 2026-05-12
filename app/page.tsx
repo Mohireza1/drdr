@@ -23,6 +23,8 @@ import { CommentCard } from "./home/components/CommentCard";
 import { DraggableSpecialties } from "./home/components/DraggableSpecialties";
 
 import { doctors } from "./home/utils/doctors";
+import Link from "next/link";
+import DraggableDoctors from "./home/components/DraggableDoctors";
 
 export default function Page() {
   return (
@@ -75,17 +77,25 @@ text-xs font-medium md:grid-cols-5 md:mx-50"
       </section>
       <Seperator />
       <section className="px-4">
-        <h2 className="text-right font-semibold text-gray-800/90">
-          به دنبال چه تخصصی هستید
+        <h2 className="text-right font-semibold text-gray-800/90 md:text-center text-2xl my-3">
+          به دنبال چه تخصصی هستید؟
         </h2>
-        <div className="my-7 overflow-hidden mask-[linear-gradient(to_right,transparent,white_5%,white_95%,transparent)] cursor-grab active:cursor-grabbing">
+        <p className="text-center">
+          به آسانی بهترین متخصصان زمینه‌های پزشکی مختلف را پیدا کنید
+        </p>
+        <div className="my-10 overflow-hidden mask-[linear-gradient(to_right,transparent,white_5%,white_95%,transparent)] cursor-grab active:cursor-grabbing">
           <DraggableSpecialties />
         </div>
-        <a className="block text-center font-semibold text-blue-500 p-8">
-          مشاهده لیست تخصص‌ها
-        </a>
+        <div className="flex justify-center">
+          <Link
+            href={"/"}
+            className="text-center text-lg font-bold text-blue-500 hover:underline underline-offset-20"
+          >
+            مشاهده لیست تخصص‌ها ←
+          </Link>
+        </div>
       </section>
-      <hr className="w-50 mx-auto my-10" />
+      <Seperator />
       <section>
         <h2 dir="rtl" className="mx-4 text-green-600 font-bold text-lg">
           دریافت مشاوره متخصصی
@@ -93,21 +103,7 @@ text-xs font-medium md:grid-cols-5 md:mx-50"
         <p dir="rtl" className="mx-4 my-2 font-medium">
           امکان مشاوره ۲۴ ساعته و ارسال فایل رایگان
         </p>
-        <div
-          dir="rtl"
-          className="overflow-scroll grid grid-flow-col auto-cols-[250px]"
-        >
-          {doctors.map((doc, i) => (
-            <DoctorCard
-              image={doc.image}
-              name={doc.name}
-              score={doc.score}
-              spec={doc.spec}
-              time={doc.time}
-              key={i}
-            />
-          ))}
-        </div>
+        <DraggableDoctors />
       </section>
       <hr className="w-50 mx-auto my-10" />
       <section dir="rtl" className="p-4 mb-6">
