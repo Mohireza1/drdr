@@ -1,0 +1,33 @@
+@import 'tailwindcss';
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('/src/assets/vazirmatn-v33.003/fonts/webfonts/Vazirmatn-Regular.woff2') format("woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url("/src/assets/vazirmatn-v33.003/fonts/webfonts/Vazirmatn-SemiBold.woff2");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url("/src/assets/vazirmatn-v33.003/fonts/webfonts/Vazirmatn-Bold.woff2");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url("/src/assets/vazirmatn-v33.003/fonts/webfonts/Vazirmatn-Medium.woff2");
+    font-weight: 500;
+}
+
+@theme {
+    --font-vazir: "Vazir", sans-serif;
+}
+
+html {
+    font-family: "Vazir";
+}
