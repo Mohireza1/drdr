@@ -3,7 +3,9 @@ import { FaStar } from "react-icons/fa";
 
 export const CommentCard = () => {
   return (
-    <div className="keen-slider__slide relative px-4 py-7 border border-gray-400 rounded-xl ">
+    <div
+      className={`keen-slider__slide relative px-4 py-7 border border-gray-400 rounded-xl min-w-60 md:min-w-100`}
+    >
       <div className="flex items-center gap-4 font-bold">
         <span>
           <div className="inline-block p-2 w-11 bg-sky-100 rounded-full">
