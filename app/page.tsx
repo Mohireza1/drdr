@@ -16,13 +16,10 @@ import { Seperator } from "./home/components/utils";
 
 import { GridButton } from "./home/components/GridButton";
 
-import { DoctorCard } from "./home/components/DoctorCard";
-
 import { CommentCard } from "./home/components/CommentCard";
 
 import { DraggableSpecialties } from "./home/components/DraggableSpecialties";
 
-import { doctors } from "./home/utils/doctors";
 import Link from "next/link";
 import DraggableDoctors from "./home/components/DraggableDoctors";
 
