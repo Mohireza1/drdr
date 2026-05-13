@@ -63,11 +63,13 @@ export default function LoginModal({ isOpen, setIsOpen }: LoginModalProps) {
                 <input
                   className={inputClass}
                   type="text"
+                  required
                   placeholder="نام کاربری..."
                 />
                 <input
                   className={inputClass}
                   type="password"
+                  required
                   placeholder="رمز عبور..."
                 />
                 <button type="submit" className={buttonClass}>

@@ -21,6 +21,8 @@ import { DraggableSpecialties } from "./home/components/DraggableSpecialties";
 import Link from "next/link";
 import DraggableDoctors from "./home/components/DraggableDoctors";
 import DraggableComments from "./home/components/DraggableComments";
+import Image from "next/image";
+import PostCard from "./home/components/PostCard";
 
 export default function Page() {
   return (
@@ -72,12 +74,12 @@ text-xs font-medium md:grid-cols-5 md:mx-50"
         </GridButton>
       </section>
       <Seperator />
-      <section className="px-4">
+      <section>
         <SectionTitle
           title="به دنبال چه تخصصی هستید"
           desc="به آسانی بهترین متخصصان را در زمینه‌های پزشکی مختلف پیدا کنید"
         />
-        <div className="overflow-hidden mask-[linear-gradient(to_right,transparent,white_5%,white_95%,transparent)] cursor-grab active:cursor-grabbing">
+        <div className="overflow-hidden mx-4 mask-[linear-gradient(to_right,transparent,white_5%,white_95%,transparent)] cursor-grab active:cursor-grabbing">
           <DraggableSpecialties />
         </div>
         <div className="flex justify-center">
@@ -101,12 +103,22 @@ text-xs font-medium md:grid-cols-5 md:mx-50"
         <DraggableDoctors />
       </section>
       <Seperator />
-      <section dir="rtl" className="p-4 mb-20">
+      <section dir="rtl" className="md:px-10">
         <SectionTitle
           title="نظرات کاربران دکتردکتر"
           desc="با بیش از ۷ میلیون کاربر رضایتمند، همواره در خدمت شما هستیم"
         />
         <DraggableComments />
+      </section>
+      <Seperator />
+      <section className="mb-20">
+        <SectionTitle
+          title="مجله‌ی دکتردکتر"
+          desc="با مقالات مجله از تازه‌های جهان پزشکی مطلع شوید"
+        />
+        <div className="flex w-full justify-center">
+          <PostCard />
+        </div>
       </section>
     </>
   );
