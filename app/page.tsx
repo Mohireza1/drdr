@@ -1,6 +1,6 @@
 "use client";
 
-import { BiSearch, BiUserCheck } from "react-icons/bi";
+import { BiSearch } from "react-icons/bi";
 
 import { CiMobile1 } from "react-icons/ci";
 
@@ -12,17 +12,15 @@ import { HiLocationMarker } from "react-icons/hi";
 
 import { IoMedical } from "react-icons/io5";
 
-import { Seperator } from "./home/components/utils";
+import { SectionTitle, Seperator } from "./home/components/utils";
 
 import { GridButton } from "./home/components/GridButton";
-
-import { CommentCard } from "./home/components/CommentCard";
 
 import { DraggableSpecialties } from "./home/components/DraggableSpecialties";
 
 import Link from "next/link";
 import DraggableDoctors from "./home/components/DraggableDoctors";
-import DraggableComments from "./home/components/DraggableCoomments";
+import DraggableComments from "./home/components/DraggableComments";
 
 export default function Page() {
   return (
@@ -75,19 +73,17 @@ text-xs font-medium md:grid-cols-5 md:mx-50"
       </section>
       <Seperator />
       <section className="px-4">
-        <h2 className="text-right font-semibold text-gray-800/90 md:text-center text-2xl my-3">
-          به دنبال چه تخصصی هستید؟
-        </h2>
-        <p className="text-center">
-          به آسانی بهترین متخصصان زمینه‌های پزشکی مختلف را پیدا کنید
-        </p>
-        <div className="my-10 overflow-hidden mask-[linear-gradient(to_right,transparent,white_5%,white_95%,transparent)] cursor-grab active:cursor-grabbing">
+        <SectionTitle
+          title="به دنبال چه تخصصی هستید"
+          desc="به آسانی بهترین متخصصان را در زمینه‌های پزشکی مختلف پیدا کنید"
+        />
+        <div className="overflow-hidden mask-[linear-gradient(to_right,transparent,white_5%,white_95%,transparent)] cursor-grab active:cursor-grabbing">
           <DraggableSpecialties />
         </div>
         <div className="flex justify-center">
           <Link
             href={"/"}
-            className="text-center text-lg font-bold text-blue-500 hover:underline underline-offset-20"
+            className="text-center text-lg font-bold text-blue-500 hover:underline underline-offset-20 mt-10"
           >
             مشاهده لیست تخصص‌ها ←
           </Link>
@@ -95,25 +91,18 @@ text-xs font-medium md:grid-cols-5 md:mx-50"
       </section>
       <Seperator />
       <section>
-        <h2 dir="rtl" className="mx-4 text-green-600 font-bold text-lg">
-          دریافت مشاوره متخصصی
-        </h2>
-        <p dir="rtl" className="mx-4 my-2 font-medium">
-          امکان مشاوره ۲۴ ساعته و ارسال فایل رایگان
-        </p>
+        <SectionTitle
+          title="رزرو نوبت آنلاین"
+          desc="مشاوره‌ی پزشکی آنلاین را با بهترین کیفیت به صورت ۲۴ ساعته دریافت کنید"
+        />
         <DraggableDoctors />
       </section>
-      <hr className="w-50 mx-auto my-10" />
-      <section dir="rtl" className="p-4 mb-6">
-        <h2 dir="rtl" className="my-2 text-sky-600 font-semibold text-lg">
-          نظرات کاربران دکتردکتر
-        </h2>
-        <p dir="rtl" className="mb-4 font-medium">
-          <span>
-            <BiUserCheck className="inline ml-2" />
-          </span>
-          بیش از ۷ میلیون کاربر رضایت‌مند
-        </p>
+      <Seperator />
+      <section dir="rtl" className="p-4 mb-20">
+        <SectionTitle
+          title="نظرات کاربران دکتردکتر"
+          desc="با بیش از ۷ میلیون کاربر رضایتمند، همواره در خدمت شما هستیم"
+        />
         <DraggableComments />
       </section>
     </>
