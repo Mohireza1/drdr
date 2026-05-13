@@ -82,10 +82,13 @@ text-xs font-medium md:grid-cols-5 md:mx-50"
         </div>
         <div className="flex justify-center">
           <Link
-            href={"/"}
-            className="text-center text-lg font-bold text-blue-500 hover:underline underline-offset-20 mt-10"
+            href="/"
+            className="text-center text-lg font-bold text-blue-500 hover:text-blue-600 underline-offset-20 mt-10 group"
           >
-            مشاهده لیست تخصص‌ها ←
+            مشاهده لیست تخصص‌ها{" "}
+            <span className="group-hover:-translate-x-2 inline-block transition-all duration-100">
+              ←
+            </span>
           </Link>
         </div>
       </section>
