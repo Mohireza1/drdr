@@ -10,11 +10,11 @@ export const SectionTitle = ({
   desc: string;
 }) => {
   return (
-    <>
+    <div className="mx-7 md:mx-0">
       <h2 className="text-right font-semibold text-gray-800/90 md:text-center text-2xl my-3">
         {title}
       </h2>
-      <p className="text-center mb-10">{desc}</p>
-    </>
+      <p className="md:text-center mb-10 ">{desc}</p>
+    </div>
   );
 };
