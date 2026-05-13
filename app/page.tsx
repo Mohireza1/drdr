@@ -22,6 +22,7 @@ import { DraggableSpecialties } from "./home/components/DraggableSpecialties";
 
 import Link from "next/link";
 import DraggableDoctors from "./home/components/DraggableDoctors";
+import DraggableComments from "./home/components/DraggableCoomments";
 
 export default function Page() {
   return (
@@ -113,10 +114,7 @@ text-xs font-medium md:grid-cols-5 md:mx-50"
           </span>
           بیش از ۷ میلیون کاربر رضایت‌مند
         </p>
-        <div className="grid grid-flow-col overflow-auto gap-4">
-          <CommentCard /> <CommentCard /> <CommentCard /> <CommentCard />
-          <CommentCard />
-        </div>
+        <DraggableComments />
       </section>
     </>
   );
