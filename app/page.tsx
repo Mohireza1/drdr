@@ -116,7 +116,10 @@ text-xs font-medium md:grid-cols-5 md:mx-50"
           title="مجله‌ی دکتردکتر"
           desc="با مقالات مجله از تازه‌های جهان پزشکی مطلع شوید"
         />
-        <div className="flex w-full justify-center">
+        <div className="flex w-full justify-center gap-8">
+          <PostCard />
+          <PostCard />
+          <PostCard />
           <PostCard />
         </div>
       </section>
