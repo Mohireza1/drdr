@@ -1,9 +1,9 @@
-import db from "@/lib/db";
 import { Suspense } from "react";
+import { getComments } from "../home/lib/queries";
 
 // Separate component that fetches data
 async function CommentsList() {
-  const data = await db(); // Await happens inside Suspense boundary
+  const data = await getComments(); // Await happens inside Suspense boundary
 
   return (
     <>
